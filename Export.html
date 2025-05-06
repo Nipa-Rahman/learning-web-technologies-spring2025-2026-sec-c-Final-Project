@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Export Wizard</title>
+  <link rel="stylesheet" href="Export.css" />
+</head>
+<body>
+  <div class="container">
+    <h2>Export Reports</h2>
+    
+    <!-- Export Settings Section -->
+    <div class="export-settings">
+      <div class="setting-item">
+        <label for="startDate">Start Date:</label>
+        <input type="date" id="startDate" onchange="updateExportPreview()" />
+      </div>
+
+      <div class="setting-item">
+        <label for="endDate">End Date:</label>
+        <input type="date" id="endDate" onchange="updateExportPreview()" />
+      </div>
+
+      <div class="setting-item">
+        <label for="format">Select Format:</label>
+        <select id="format" onchange="updateExportPreview()">
+          <option value="csv">CSV</option>
+          <option value="pdf">PDF</option>
+        </select>
+      </div>
+
+      <!-- Scheduled Export -->
+      <div class="setting-item">
+        <label for="scheduledExport">Scheduled Export:</label>
+        <input type="checkbox" id="scheduledExport" onchange="toggleScheduledExport()" />
+      </div>
+
+      <button onclick="downloadReport()">Download Report</button>
+    </div>
+  </div>
+
+  <script src="Export.js"></script>
+</body>
+</html>
