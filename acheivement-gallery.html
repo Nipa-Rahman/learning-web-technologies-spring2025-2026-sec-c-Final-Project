@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Achievement Gallery</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="container">
+    <h2>Achievement Gallery</h2>
+
+    <div class="achievement">
+      <label></label> 5KM Run Completed</label><br>
+      <button onclick="shareMilestone('5KM Run Completed')">Share</button>
+    </div><br>
+
+    <div class="achievement">
+      <label> 100kg Deadlift</label><br>
+      <button onclick="shareMilestone('100kg Deadlift')">Share</button>
+    </div>
+
+  </div>
+
+  <script>
+    function shareMilestone(text) {
+      alert("Shared: " + text);
+    }
+  </script>
+</body>
+</html>

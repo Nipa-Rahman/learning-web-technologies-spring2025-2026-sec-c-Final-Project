@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Progress Dashboard</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <div class="container">
+    <h2>Progress Dashboard</h2>
+
+    <!-- Dropdown to select progress type -->
+    <form>
+      <label for="progressType">Select Progress Type:</label>
+      <select id="progressType" onchange="renderChart(this.value)">
+        <option value="strength">Strength</option>
+        <option value="cardio">Cardio</option>
+      </select>
+    </form>
+
+    <!-- Progress Chart -->
+    <div class="chart-container">
+      <canvas id="progressChart"></canvas>
+    </div>
+
+    <!-- Trend Graph -->
+    <div class="trend-container">
+      <canvas id="trendGraph"></canvas>
+    </div>
+
+    <a href="acheivement-gallery.html" class="gallery-link">Go to Achievement Gallery</a>
+  </div>
+
+  <!-- Load Chart.js -->
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  <script src="progess char.js"></script>
+</body>
+</html>
