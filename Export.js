@@ -1,4 +1,4 @@
-// Function to update export preview based on selections
+
 function updateExportPreview() {
     const startDate = document.getElementById("startDate").value;
     const endDate = document.getElementById("endDate").value;
@@ -7,7 +7,7 @@ function updateExportPreview() {
     console.log(`Previewing export: From ${startDate} to ${endDate}, Format: ${format}`);
   }
   
-  // Function to toggle scheduled export
+  
   function toggleScheduledExport() {
     const scheduledExport = document.getElementById("scheduledExport").checked;
     if (scheduledExport) {
@@ -17,7 +17,7 @@ function updateExportPreview() {
     }
   }
   
-  // Function to download the report
+  
   function downloadReport() {
     const startDate = document.getElementById("startDate").value;
     const endDate = document.getElementById("endDate").value;
@@ -35,10 +35,10 @@ function updateExportPreview() {
     }
   }
   
-  // Function to download CSV
+  
   function downloadCSV(startDate, endDate) {
     let csvContent = "Date,User,Action\n";
-    // Generate the CSV content (replace with real data fetching)
+    
     csvContent += `${startDate},Alice,Login\n`;
     csvContent += `${endDate},Bob,Logout\n`;
   
@@ -50,9 +50,9 @@ function updateExportPreview() {
     link.click();
   }
   
-  // Function to simulate PDF download (you can integrate with a PDF library)
+ 
   function downloadPDF(startDate, endDate) {
     alert(`PDF download for report from ${startDate} to ${endDate} is triggered!`);
-    // You can replace this with actual PDF generation logic using a library like jsPDF
+    
   }
   
