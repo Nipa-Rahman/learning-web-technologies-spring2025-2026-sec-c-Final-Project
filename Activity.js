@@ -1,4 +1,4 @@
-// Sample logs (you would fetch from a database in a real scenario)
+
 const logs = [
   { user: "Alice", action: "Login", date: "2025-05-01" },
   { user: "Bob", action: "View Profile", date: "2025-05-02" },
@@ -7,7 +7,7 @@ const logs = [
   { user: "Bob", action: "Logout", date: "2025-05-05" }
 ];
 
-// Function to filter logs based on user input
+
 function filterLogs() {
   const startDate = document.getElementById("startDate").value;
   const endDate = document.getElementById("endDate").value;
@@ -24,7 +24,7 @@ function filterLogs() {
   displayLogs(filteredLogs);
 }
 
-// Function to display filtered logs
+
 function displayLogs(filteredLogs) {
   const logList = document.getElementById("logList");
   logList.innerHTML = "";
@@ -40,7 +40,7 @@ function displayLogs(filteredLogs) {
   }
 }
 
-// Function to export logs as CSV
+
 function exportLogs() {
   let csvContent = "Date,User,Action\n";
 
