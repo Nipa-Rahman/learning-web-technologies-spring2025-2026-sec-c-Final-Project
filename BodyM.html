@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Body Measurements</title>
+  <link rel="stylesheet" href="Bodym.css">
+</head>
+<body>
+  <div class="container">
+    <h1>Body Measurements</h1>
+
+    <!-- Measurement Form -->
+    <form id="measurementForm" onsubmit="return validateMeasurements(event)">
+      <div class="input-group">
+        <label for="weight">Weight (kg):</label>
+        <input type="number" id="weight" placeholder="Enter weight" min="1" max="300" required>
+        <span class="error" id="weight-error"></span>
+      </div>
+
+      <div class="input-group">
+        <label for="waist">Waist (cm):</label>
+        <input type="number" id="waist" placeholder="Enter waist" min="40" max="200" required>
+        <span class="error" id="waist-error"></span>
+      </div>
+
+      <div class="input-group">
+        <label for="date">Date:</label>
+        <input type="date" id="date" required>
+        <span class="error" id="date-error"></span>
+      </div>
+
+      <button type="submit">Log Measurements</button>
+    </form>
+
+    <!-- Progress Photo Upload -->
+    <form id="photoForm" onsubmit="return validatePhoto(event)">
+      <h2>Upload Progress Photo</h2>
+      <div class="input-group">
+        <label for="photo">Select Photo:</label>
+        <input type="file" id="photo" accept="image/png, image/jpeg" required>
+        <span class="error" id="photo-error"></span>
+      </div>
+      <button type="submit">Upload</button>
+    </form>
+
+    <!-- Trend Analysis -->
+    <form id="trendForm" onsubmit="return validateTrend(event)">
+      <h2>Trend Analysis</h2>
+      <div class="input-group">
+        <label>Date Range:</label>
+        <input type="date" id="start-date" required>
+        <input type="date" id="end-date" required>
+        <span class="error" id="trend-error"></span>
+      </div>
+      <button type="submit">View Trend</button>
+    </form>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
