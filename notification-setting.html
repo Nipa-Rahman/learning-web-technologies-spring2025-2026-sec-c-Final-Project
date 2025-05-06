@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Notification Settings</title>
+  <link rel="stylesheet" href="Notification.css">
+</head>
+<body>
+  <div class="container">
+    <h2>Notification Settings</h2>
+
+    <form id="settingsForm" onsubmit="return validateSettings()">
+      <div class="setting-item">
+        <label for="emailToggle">Email Notifications:</label>
+        <input type="checkbox" id="emailToggle" name="notification" value="email">
+      </div>
+
+      <div class="setting-item">
+        <label for="pushToggle">Push Notifications:</label>
+        <input type="checkbox" id="pushToggle" name="notification" value="push">
+      </div>
+
+      <p id="errorMsg" style="color:red; display:none;">Please select at least one notification option.</p>
+
+      <button type="submit">Save Settings</button>
+    </form>
+  </div>
+
+  <script src="notification-setting.js"></script>
+</body>
+</html>
